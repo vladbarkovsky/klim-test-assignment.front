@@ -1,0 +1,26 @@
+<div class="modal-header">
+  <button
+    type="button"
+    class="btn-close"
+    aria-describedby="modal-title"
+    (click)="onCloseClick()"
+  ></button>
+</div>
+
+<div class="modal-body pb-0">
+  <ngb-carousel class="mb-3">
+    @for (image of product?.images; track $index) {
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper text-center">
+        <img [src]="image" [alt]="image" />
+      </div>
+    </ng-template>
+    }
+  </ngb-carousel>
+
+  <p class="fs-5">{{ product?.name }}</p>
+</div>
+
+<div class="modal-footer pt-0">
+  <button type="button" class="btn btn-danger">Buy now</button>
+</div>

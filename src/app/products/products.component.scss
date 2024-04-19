@@ -1,0 +1,12 @@
+.buttons-container {
+  height: 100vh;
+}
+
+.with-margin {
+  margin-left: 150px;
+}
+
+// Overriding Bootstrap (disabled button).
+.price-button {
+  opacity: 100%;
+}

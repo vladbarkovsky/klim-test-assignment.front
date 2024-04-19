@@ -1,0 +1,39 @@
+// Overriding ng-bootstrap.
+.modal-header, .modal-footer {
+  border: none;
+}
+
+// TODO: Replace with icomoon icons.
+:host ::ng-deep {
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-image: none;
+    position: relative;
+
+    &::before {
+      content: '\2bc7';
+      font-size: 40px;
+      color: gray;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      line-height: 40px;
+    }
+  }
+
+  .carousel-control-prev-icon::before {
+    content: '\2bc7';
+  }
+
+  .carousel-control-next-icon::before {
+    content: '\2bc8';
+  }
+}
+
+ngb-carousel {
+  height: 200px;
+
+  img {
+    max-height: 200px;
+  }
+}
