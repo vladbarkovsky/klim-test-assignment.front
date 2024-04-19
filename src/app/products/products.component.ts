@@ -24,12 +24,13 @@ export class ProductsComponent implements OnInit {
   buttons: ButtonDto[] = [];
 
   ngOnInit(): void {
+    // TODO: Show loader while loading product.
+
     this.apiClient
       .getButtonData()
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe({
-        next: (buttons) =>
-          (this.buttons = buttons.concat(buttons).concat(buttons)),
+        next: (buttons) => (this.buttons = buttons),
         error: (error) => this.toastrService.error(error),
       });
   }

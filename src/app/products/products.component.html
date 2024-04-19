@@ -1,31 +1,33 @@
 <div
   class="buttons-container container-fluid d-flex justify-content-center align-items-center"
 >
-  <div class="row">
+  <div class="row justify-content-center">
     @for (button of buttons; track button.id) {
-    <div class="btn-group col-auto" role="group">
-      <button
-        type="button"
-        class="btn btn-lg"
-        [ngStyle]="{
-          'background-color': button.color,
-          color: button.color | invertHexColor
-        }"
-        (click)="onProductClick(button.product_id)"
-      >
-        {{ button.custom_text || "Buy now" }}
-      </button>
+    <div class="col-auto mb-3 px-5">
+      <div class="btn-group" role="group">
+        <button
+          type="button"
+          class="btn btn-lg"
+          [ngStyle]="{
+            'background-color': button.color,
+            color: button.color | invertHexColor
+          }"
+          (click)="onProductClick(button.product_id)"
+        >
+          {{ button.custom_text || "Buy now" }}
+        </button>
 
-      <button
-        type="button"
-        class="price-button btn btn-lg"
-        [ngStyle]="{
-          'border-color': button.color,
-          color: button.color
-        }"
-        [innerHTML]="button.price"
-        disabled
-      ></button>
+        <button
+          type="button"
+          class="price-button btn btn-lg"
+          [ngStyle]="{
+            'border-color': button.color,
+            color: button.color
+          }"
+          [innerHTML]="button.price"
+          disabled
+        ></button>
+      </div>
     </div>
     }
   </div>

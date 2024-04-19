@@ -3,14 +3,31 @@
   border: none;
 }
 
-// TODO: Replace with icomoon icons.
+.btn-close {
+  top: -15px;
+  right: 15px;
+  transform: translate(50%, -50%);
+  background: none;
+  opacity: 100%;
+
+  // TODO: Replace with icomoon icon.
+  &::before {
+    content: '\1f167';
+    font-size: 36px;
+    color: gray;
+  }
+}
+
 :host ::ng-deep {
+  .carousel-control-prev, .carousel-control-next {
+    opacity: 100%;
+  }
+
   .carousel-control-prev-icon, .carousel-control-next-icon {
     background-image: none;
     position: relative;
 
     &::before {
-      content: '\2bc7';
       font-size: 40px;
       color: gray;
       position: absolute;
@@ -18,8 +35,11 @@
       left: 50%;
       transform: translate(-50%, -50%);
       line-height: 40px;
+      opacity: 100%;
     }
   }
+
+  // TODO: Replace with icomoon icons.
 
   .carousel-control-prev-icon::before {
     content: '\2bc7';

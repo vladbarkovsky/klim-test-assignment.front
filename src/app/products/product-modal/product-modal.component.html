@@ -1,7 +1,7 @@
-<div class="modal-header">
+<div class="modal-header position-relative">
   <button
     type="button"
-    class="btn-close"
+    class="btn-close position-absolute"
     aria-describedby="modal-title"
     (click)="onCloseClick()"
   ></button>
@@ -22,5 +22,8 @@
 </div>
 
 <div class="modal-footer pt-0">
-  <button type="button" class="btn btn-danger">Buy now</button>
+  <!-- NOTE: ngbAutofocus prevents close button focus and related styles we don't need. -->
+  <button ngbAutofocus type="button" class="btn btn-lg btn-success">
+    Buy now
+  </button>
 </div>
