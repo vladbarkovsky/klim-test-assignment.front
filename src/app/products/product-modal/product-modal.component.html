@@ -1,7 +1,7 @@
 <div class="modal-header position-relative">
   <button
     type="button"
-    class="btn-close position-absolute"
+    class="btn-close position-absolute icomoon-icon x-circle"
     aria-describedby="modal-title"
     (click)="onCloseClick()"
   ></button>
@@ -21,9 +21,21 @@
   <p class="fs-5">{{ product?.name }}</p>
 </div>
 
-<div class="modal-footer pt-0">
-  <!-- NOTE: ngbAutofocus prevents close button focus and related styles we don't need. -->
-  <button ngbAutofocus type="button" class="btn btn-lg btn-success">
+<div class="modal-footer pt-0 d-flex justify-content-between">
+  <div>
+    @if (product?.price) {
+    <div
+      class="text-decoration-line-through text-center original-price fw-bold text-secondary"
+      [innerHTML]="product?.original_price"
+    ></div>
+
+    <div class="fs-5 fw-bold" [innerHTML]="product?.price"></div>
+    } @else {
+    <div class="fs-5 fw-bold" [innerHTML]="product?.original_price"></div>
+    }
+  </div>
+
+  <button type="button" class="btn btn-lg btn-success" (click)="onByNowClick()">
     Buy now
   </button>
 </div>

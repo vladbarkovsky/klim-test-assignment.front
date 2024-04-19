@@ -6,13 +6,13 @@
 @import 'ngx-toastr/toastr';
 
 .product-modal-backdrop {
-  background-color: lightgray;
+  background-color: $gray-300;
 
   // Overriding ng-bootstrap.
   opacity: 100% !important;
 }
 
 .product-modal-window .modal-content {
-  border: 2px solid gray;
+  border: 2px solid $gray-500;
   border-radius: 0;
 }

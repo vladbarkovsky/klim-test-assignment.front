@@ -8,6 +8,7 @@ import {
   NgbCarouselConfig,
   NgbCarouselModule,
 } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-modal',
@@ -23,6 +24,7 @@ export class ProductModalComponent implements OnInit {
   private readonly toastrService = inject(ToastrService);
   private readonly ngbActiveModal = inject(NgbActiveModal);
   private readonly ngbCarouselConfig = inject(NgbCarouselConfig);
+  private readonly router = inject(Router);
 
   @Input() productId!: string;
 
@@ -44,5 +46,10 @@ export class ProductModalComponent implements OnInit {
 
   onCloseClick(): void {
     this.ngbActiveModal.dismiss();
+  }
+
+  onByNowClick(): void {
+    this.ngbActiveModal.dismiss();
+    this.router.navigate(['success']);
   }
 }

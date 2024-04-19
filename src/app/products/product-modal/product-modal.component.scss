@@ -1,20 +1,27 @@
+@import '../../../assets/icomoon/icons.scss';
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import '../../../../node_modules/bootstrap/scss/variables';
+
 // Overriding ng-bootstrap.
 .modal-header, .modal-footer {
   border: none;
 }
 
 .btn-close {
-  top: -15px;
-  right: 15px;
+  top: 2px;
+  right: 12px;
   transform: translate(50%, -50%);
   background: none;
   opacity: 100%;
 
+  &:focus {
+    box-shadow: none;
+  }
+
   // TODO: Replace with icomoon icon.
   &::before {
-    content: '\1f167';
-    font-size: 36px;
-    color: gray;
+    font-size: 26px;
+    color: $secondary;
   }
 }
 
@@ -29,7 +36,7 @@
 
     &::before {
       font-size: 40px;
-      color: gray;
+      color: $dark;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -39,14 +46,15 @@
     }
   }
 
-  // TODO: Replace with icomoon icons.
-
   .carousel-control-prev-icon::before {
-    content: '\2bc7';
+    font-family: 'icomoon';
+    content: '\e900';
+    transform: rotate(180deg) translate(50%, 50%);
   }
 
   .carousel-control-next-icon::before {
-    content: '\2bc8';
+    font-family: 'icomoon';
+    content: '\e900';
   }
 }
 
@@ -56,4 +64,8 @@ ngb-carousel {
   img {
     max-height: 200px;
   }
+}
+
+.original-price {
+  font-size: 18px;
 }
