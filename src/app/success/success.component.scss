@@ -1,9 +1,10 @@
-@import '../../assets/icomoon/icons.scss';
+@import "../../assets/icomoon/icons.scss";
 @import "../../../node_modules/bootstrap/scss/functions";
-@import '../../../node_modules/bootstrap/scss/variables';
+@import "../../../node_modules/bootstrap/scss/variables";
 
 .success-container {
   height: 100vh;
+  background-color: $gray-300;
 }
 
 .checkmark-outline {
