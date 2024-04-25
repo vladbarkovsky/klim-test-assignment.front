@@ -1,9 +1,10 @@
-@import '../../../assets/icomoon/icons.scss';
+@import "../../../assets/icomoon/icons.scss";
 @import "../../../../node_modules/bootstrap/scss/functions";
-@import '../../../../node_modules/bootstrap/scss/variables';
+@import "../../../../node_modules/bootstrap/scss/variables";
 
 // Overriding ng-bootstrap.
-.modal-header, .modal-footer {
+.modal-header,
+.modal-footer {
   border: none;
 }
 
@@ -18,7 +19,6 @@
     box-shadow: none;
   }
 
-  // TODO: Replace with icomoon icon.
   &::before {
     font-size: 26px;
     color: $secondary;
@@ -26,11 +26,13 @@
 }
 
 :host ::ng-deep {
-  .carousel-control-prev, .carousel-control-next {
+  .carousel-control-prev,
+  .carousel-control-next {
     opacity: 100%;
   }
 
-  .carousel-control-prev-icon, .carousel-control-next-icon {
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
     background-image: none;
     position: relative;
 
@@ -47,14 +49,14 @@
   }
 
   .carousel-control-prev-icon::before {
-    font-family: 'icomoon';
-    content: '\e900';
+    font-family: "icomoon";
+    content: "\e900";
     transform: rotate(180deg) translate(50%, 50%);
   }
 
   .carousel-control-next-icon::before {
-    font-family: 'icomoon';
-    content: '\e900';
+    font-family: "icomoon";
+    content: "\e900";
   }
 }
 
